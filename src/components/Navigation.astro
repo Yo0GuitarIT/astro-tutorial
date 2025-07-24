@@ -1,7 +1,5 @@
 ---
-
+const { url, pathname } = Astro.props;
 ---
 
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<a href={url}>{pathname}</a>
