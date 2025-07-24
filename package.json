@@ -6,8 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --write .",
-    "astro": "astro"
+    "format": "prettier --write . --config prettier.config.mjs",
+    "astro": "astro",
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
