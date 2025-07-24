@@ -6,11 +6,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier --write .",
-    "astro": "astro"
+    "format": "prettier --write . --config prettier.config.mjs",
+    "astro": "astro",
+    "check": "astro check"
   },
   "dependencies": {
-    "astro": "^5.12.3"
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.12.3",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
