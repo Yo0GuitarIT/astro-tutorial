@@ -88,3 +88,21 @@ h1 {
     display: none;
   }
 }
+
+#themeToggle {
+  border: 0;
+  background: none;
+}
+.sun {
+  fill: black;
+}
+.moon {
+  fill: transparent;
+}
+
+.dark .sun {
+  fill: transparent;
+}
+.dark .moon {
+  fill: white;
+}
