@@ -4,10 +4,12 @@ type GreetingProps = {
   messages: string[];
 };
 
-const Greeting = ({ messages }: GreetingProps) => {
+function Greeting({ messages }: GreetingProps) {
+  const [greeting, setGreeting] = useState(messages[0] || "Hello");
+
   const randomMessage = () =>
     messages[Math.floor(Math.random() * messages.length)];
-  const [greeting, setGreeting] = useState(randomMessage());
+
   const OnClick = () => setGreeting(randomMessage());
 
   return (
@@ -16,6 +18,6 @@ const Greeting = ({ messages }: GreetingProps) => {
       <button onClick={OnClick}>New Greeting</button>
     </div>
   );
-};
+}
 
 export default Greeting;
