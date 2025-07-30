@@ -1,4 +1,4 @@
-import type { Post } from "@/pages/tags/[tag].astro";
+import { type Post } from "@/types";
 
 type BlogPostProps = {
   post: Post;

@@ -1,14 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPost from "@/components/BlogPost";
-
-export type Post = {
-  url: string;
-  frontmatter: {
-    tags: string[];
-    title: string;
-  };
-};
+import { type Post } from "@/types";
 
 export async function getStaticPaths() {
   const allPosts = Object.values(
@@ -42,6 +35,6 @@ const { posts } = Astro.props;
   </p>
 
   <ul>
-    {posts.map(post => <BlogPost {...post} />)}
+    {posts.map(post => <BlogPost post={post} />)}
   </ul>
 </BaseLayout>

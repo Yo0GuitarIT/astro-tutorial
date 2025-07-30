@@ -1,5 +1,5 @@
-import type { Post } from "@/pages/tags/[tag].astro";
-import BlogPost from "../BlogPost";
+import { type Post } from "@/types";
+import BlogPost from "@/components/BlogPost";
 
 type BlogPageProps = {
   allPosts: Post[];
