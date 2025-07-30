@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import BlogPost from "@/components/BlogPost";
-import type { Post } from "./tags/[tag].astro";
+import type { Post } from "@/pages/tags/[tag].astro";
+import BlogPage from "@/components/pages/BlogPage";
 
 const allPosts = Object.values(
   import.meta.glob("./posts/*.md", { eager: true })
@@ -11,8 +11,5 @@ const pageTitle = "My Astro Learning Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
-    {allPosts.map(post => <BlogPost {...post} />)}
-  </ul>
+  <BlogPage allPosts={allPosts} />
 </BaseLayout>
