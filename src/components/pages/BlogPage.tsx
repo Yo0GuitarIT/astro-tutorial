@@ -11,7 +11,7 @@ function BlogPage({ allPosts }: BlogPageProps) {
       <p>This is where I will post about my journey learning Astro.</p>
       <ul>
         {allPosts.map(post => (
-          <BlogPost post={post} />
+          <BlogPost post={post} key={post.id} />
         ))}
       </ul>
     </>
