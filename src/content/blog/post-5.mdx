@@ -1,6 +1,11 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: "MDX Test Page"
+pubDate: 2023-10-01
+description: "This is a test of MDX in Astro, showcasing how to use interactive React components within Markdown content."
+author: "Astro Learner"
+image:
+  url: "https://docs.astro.build/assets/rose.webp"
+  alt: "The Astro logo on a dark background with a pink glow."
 tags: ["astro", "mdx", "react"]
 ---
 
@@ -19,7 +24,12 @@ And now, for the magic! We can embed a fully interactive React component right h
 
 <Greeting
   client:load
-  messages={["Welcome to MDX", "This is interactive", "Hello from a .mdx file", "Another message"]}
+  messages={[
+    "Welcome to MDX",
+    "This is interactive",
+    "Hello from a .mdx file",
+    "Another message",
+  ]}
 />
 
 Isn't that cool? You can mix static content and interactive components seamlessly.

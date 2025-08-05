@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPage from "@/components/pages/BlogPage";
-import { allPosts } from "@/utils";
+import { getAllPosts } from "@/utils";
 
 const pageTitle = "My Astro Learning Blog";
+const allPosts = await getAllPosts();
 ---
 
 <BaseLayout pageTitle={pageTitle}>
