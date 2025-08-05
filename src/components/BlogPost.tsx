@@ -1,4 +1,4 @@
-import { type Post } from "@/utils";
+import { type Post } from "@/content/helpers";
 
 type BlogPostProps = {
   post: Post;

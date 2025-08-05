@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPost from "@/components/BlogPost";
-import { type Post, getAllPosts } from "@/utils";
+import { type Post, getAllPosts } from "@/content/helpers";
 
 export async function getStaticPaths() {
   const allPosts = await getAllPosts();
