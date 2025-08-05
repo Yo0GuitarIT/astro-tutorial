@@ -1,20 +1,16 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPost from "@/components/BlogPost";
-import { type Post } from "@/types";
-import { allPosts } from "@/utils";
+import { type Post, getAllPosts } from "@/utils";
 
 export async function getStaticPaths() {
+  const allPosts = await getAllPosts();
   const uniqueTags = [
-    ...new Set(
-      (allPosts as Post[]).map(post => post.frontmatter.tags ?? []).flat()
-    ),
+    ...new Set((allPosts as Post[]).map(post => post.data.tags ?? []).flat()),
   ];
 
   return uniqueTags.map(tag => {
-    const filteredPosts = allPosts.filter(post =>
-      post.frontmatter.tags.includes(tag)
-    );
+    const filteredPosts = allPosts.filter(post => post.data.tags.includes(tag));
     return {
       params: { tag },
       props: { posts: filteredPosts },

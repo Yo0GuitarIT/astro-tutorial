@@ -1,4 +1,4 @@
-import { type Post } from "@/types";
+import { type Post } from "@/utils";
 import BlogPost from "@/components/BlogPost";
 
 type BlogPageProps = {

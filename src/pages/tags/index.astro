@@ -1,12 +1,10 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { type Post } from "@/types";
-import { allPosts } from "@/utils";
+import { type Post, getAllPosts } from "@/utils";
 
+const allPosts = await getAllPosts();
 const tags = [
-  ...new Set(
-    allPosts.map(post => (post as Post).frontmatter.tags ?? []).flat()
-  ),
+  ...new Set(allPosts.map(post => (post as Post).data.tags ?? []).flat()),
 ];
 const pageTitle = "Tag Index";
 ---

@@ -1,14 +1,13 @@
-import { type Post } from "@/types";
+import { type Post } from "@/utils";
 
 type BlogPostProps = {
   post: Post;
 };
 
 function BlogPost({ post }: BlogPostProps) {
-  const { url, frontmatter } = post;
   return (
     <li>
-      <a href={url}>{frontmatter.title}</a>
+      <a href={`/blog/${post.id}`}>{post.data.title}</a>
     </li>
   );
 }
