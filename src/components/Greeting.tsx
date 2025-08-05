@@ -11,6 +11,8 @@ function Greeting({ messages }: GreetingProps) {
     messages[Math.floor(Math.random() * messages.length)];
 
   const OnClick = () => setGreeting(randomMessage());
+  
+  console.log('rerender')
 
   return (
     <div>

@@ -2,11 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPost from "@/components/BlogPost";
 import { type Post } from "@/types";
+import { allPosts } from "@/utils/index.astro";
 
 export async function getStaticPaths() {
-  const allPosts = Object.values(
-    import.meta.glob("../posts/*.md", { eager: true })
-  ) as Post[];
 
   const uniqueTags = [
     ...new Set(
