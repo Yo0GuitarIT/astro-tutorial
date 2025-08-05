@@ -1,11 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
-type Post = { frontmatter: { tags?: string[] } };
-
-const allPosts = Object.values(
-  import.meta.glob("../posts/*.md", { eager: true })
-);
+import { type Post } from "@/types";
+import { allPosts } from "@/utils";
 
 const tags = [
   ...new Set(
