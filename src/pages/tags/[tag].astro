@@ -2,10 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogPost from "@/components/BlogPost";
 import { type Post } from "@/types";
-import { allPosts } from "@/utils/index.astro";
+import { allPosts } from "@/utils";
 
 export async function getStaticPaths() {
-
   const uniqueTags = [
     ...new Set(
       (allPosts as Post[]).map(post => post.frontmatter.tags ?? []).flat()

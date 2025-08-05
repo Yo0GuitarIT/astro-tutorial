@@ -1,7 +1,5 @@
----
 import type { Post } from "@/types";
 
 export const allPosts = Object.values(
   import.meta.glob<Post>("../pages/posts/*.{md,mdx}", { eager: true })
 ) as Post[];
----
