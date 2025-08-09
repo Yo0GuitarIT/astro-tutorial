@@ -7,7 +7,7 @@ type BlogPostProps = {
 function BlogPost({ post }: BlogPostProps) {
   return (
     <li>
-      <a href={`/blog/${post.id.replace(/\.[^/.]+$/, "")}`}>
+      <a className="text-violet-500 hover:text-green-600" href={`/blog/${post.id.replace(/\.[^/.]+$/, "")}`}>
         {post.data.title}
       </a>
     </li>
