@@ -1,4 +1,4 @@
-import { type Post } from "@/utils";
+import { type Post } from "@/content/helpers";
 
 type BlogPostProps = {
   post: Post;
@@ -7,7 +7,9 @@ type BlogPostProps = {
 function BlogPost({ post }: BlogPostProps) {
   return (
     <li>
-      <a href={`/blog/${post.id.replace(/\.[^/.]+$/, "")}`}>{post.data.title}</a>
+      <a className="text-violet-500 hover:text-green-600" href={`/blog/${post.id.replace(/\.[^/.]+$/, "")}`}>
+        {post.data.title}
+      </a>
     </li>
   );
 }
